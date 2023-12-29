@@ -12,7 +12,7 @@ void fragment() {
 	vec4 color = textureColor;
 	
 	if (apply) {
-		float adjustedAmount = amount / 100.0;
+		float adjustedAmount = amount * texture(offsetTexture, UV).r / 100.0;
 		if (applyColor1)
 			color.r = texture(TEXTURE, vec2(UV.x + adjustedAmount, UV.y)).r;
 			

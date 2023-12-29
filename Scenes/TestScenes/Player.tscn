@@ -10,9 +10,9 @@ size = Vector2(386, 384)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_saw3l"]
 shader = ExtResource("2_5awks")
 shader_parameter/apply = false
-shader_parameter/applyColor1 = true
-shader_parameter/applyColor2 = true
-shader_parameter/amount = 4.0
+shader_parameter/applyColor1 = false
+shader_parameter/applyColor2 = false
+shader_parameter/amount = 1.2
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_6nkco")
