@@ -1,10 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwb62g62xjnqq"]
+[gd_scene load_steps=6 format=3 uid="uid://cwb62g62xjnqq"]
 
 [ext_resource type="Script" path="res://Scripts/Player/Player.gd" id="1_6nkco"]
 [ext_resource type="Texture2D" uid="uid://c453esgrqikf" path="res://icon.svg" id="1_512tq"]
+[ext_resource type="Shader" path="res://Shaders/Player/Player.gdshader" id="2_5awks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_owh6m"]
-size = Vector2(130, 128)
+size = Vector2(386, 384)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_saw3l"]
+shader = ExtResource("2_5awks")
+shader_parameter/apply = false
+shader_parameter/applyColor1 = true
+shader_parameter/applyColor2 = true
+shader_parameter/amount = 4.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_6nkco")
@@ -14,4 +22,6 @@ shape = SubResource("RectangleShape2D_owh6m")
 
 [node name="Icon" type="Sprite2D" parent="."]
 texture_filter = 1
+material = SubResource("ShaderMaterial_saw3l")
+scale = Vector2(3, 3)
 texture = ExtResource("1_512tq")
