@@ -1,10 +1,12 @@
-extends CharacterBody2D
 class_name Player
+extends CharacterBody2D
 
-const SPEED = 300.0
+# following godot style guide
+# https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html
+
+const SPEED : float = 300.0
 
 func _physics_process(delta):
-	
 	move_player()
 
 

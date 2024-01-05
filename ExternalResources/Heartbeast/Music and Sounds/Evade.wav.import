@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cxygwh0gb0kb1"
+path="res://.godot/imported/Evade.wav-dbbed009d6ba422fe6104a5b3934dffd.sample"
+
+[deps]
+
+source_file="res://ExternalResources/Heartbeast/Music and Sounds/Evade.wav"
+dest_files=["res://.godot/imported/Evade.wav-dbbed009d6ba422fe6104a5b3934dffd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
