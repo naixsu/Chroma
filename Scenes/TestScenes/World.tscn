@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://yrldmqlq7lfb"]
+[gd_scene load_steps=3 format=3 uid="uid://yrldmqlq7lfb"]
 
 [ext_resource type="Texture2D" uid="uid://cu6c2q4e2we1d" path="res://ExternalResources/Heartbeast/World/Bush.png" id="1_3yvir"]
+[ext_resource type="PackedScene" uid="uid://cwb62g62xjnqq" path="res://Scenes/TestScenes/Player.tscn" id="2_k30gn"]
 
 [node name="World" type="Node2D"]
 
 [node name="Bush" type="Sprite2D" parent="."]
 position = Vector2(59, 48)
 texture = ExtResource("1_3yvir")
+
+[node name="Player" parent="." instance=ExtResource("2_k30gn")]
+position = Vector2(109, 59)

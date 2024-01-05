@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwb62g62xjnqq"]
+[gd_scene load_steps=8 format=3 uid="uid://cwb62g62xjnqq"]
 
 [ext_resource type="Script" path="res://Scripts/Player/Player.gd" id="1_6nkco"]
 [ext_resource type="Texture2D" uid="uid://c453esgrqikf" path="res://icon.svg" id="1_512tq"]
 [ext_resource type="Shader" path="res://Shaders/Player/Player.gdshader" id="2_5awks"]
+[ext_resource type="Texture2D" uid="uid://c7aij0e56r454" path="res://ExternalResources/Heartbeast/Player/Player.png" id="4_21him"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_owh6m"]
 size = Vector2(386, 384)
@@ -14,14 +15,27 @@ shader_parameter/applyColor1 = false
 shader_parameter/applyColor2 = false
 shader_parameter/amount = 1.2
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h8wno"]
+radius = 8.0
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_6nkco")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CATest" type="Node2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CATest"]
 shape = SubResource("RectangleShape2D_owh6m")
 
-[node name="Icon" type="Sprite2D" parent="."]
+[node name="Icon" type="Sprite2D" parent="CATest"]
 texture_filter = 1
 material = SubResource("ShaderMaterial_saw3l")
 scale = Vector2(3, 3)
 texture = ExtResource("1_512tq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("4_21him")
+hframes = 60
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_h8wno")
