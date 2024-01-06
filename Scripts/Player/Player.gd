@@ -6,8 +6,8 @@ extends CharacterBody2D
 # following tutorial 
 # https://www.youtube.com/watch?v=mAbG8Oi-SvQ&list=PL9FzW-m48fn2SlrW0KoLT4n5egNdX-W9a
 
-const SPEED : float = 80
-const ACCELERATION : float = 100
+const SPEED : float = 60
+const ACCELERATION : float = 80
 const FRICTION : float = 2000
 
 func _physics_process(delta):
@@ -22,6 +22,7 @@ func move_player(delta) -> void:
 	# might not need the if-else below
 	if direction != Vector2.ZERO:
 		velocity = direction * SPEED * ACCELERATION * delta
+		#velocity = velocity.move_toward(direction * SPEED, ACCELERATION * delta)
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 		
