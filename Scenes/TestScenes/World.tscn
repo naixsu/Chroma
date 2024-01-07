@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://yrldmqlq7lfb"]
+
+[ext_resource type="PackedScene" uid="uid://cwb62g62xjnqq" path="res://Scenes/TestScenes/Player.tscn" id="2_k30gn"]
+[ext_resource type="PackedScene" uid="uid://dxa6s3hcveewp" path="res://Scenes/TestScenes/Bush.tscn" id="2_tnwfx"]
+
+[node name="World" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("2_k30gn")]
+position = Vector2(109, 59)
+
+[node name="Bush" parent="." instance=ExtResource("2_tnwfx")]
+position = Vector2(54, 65)
+
+[node name="Bush2" parent="." instance=ExtResource("2_tnwfx")]
+position = Vector2(116, 118)
