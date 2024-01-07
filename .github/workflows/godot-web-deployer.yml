@@ -9,8 +9,6 @@
 # 3. The action should build your project and push it to the gh-pages branch.
 # 4. Going into Settings > Pages > Deploy from a branch and select gh-pages, this should create a new job to deploy and should work then.
 
-# I had an issue with imports in my project that required me to run the Godot build twice, which is line 71.
-
 name: "godot4-web-deployer"
 on:
   push:
